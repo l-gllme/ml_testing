@@ -1,6 +1,6 @@
 VENV_NAME := ml-env
 PYTHON := python3
-SCRIPT := test.py
+SCRIPT := main.py
 
 all: run
 
@@ -10,7 +10,6 @@ setup:
 	@. $(VENV_NAME)/bin/activate; pip install pandas matplotlib numpy scikit-learn
 
 run:
-	@echo "Running script $(SCRIPT)..."
 	@. $(VENV_NAME)/bin/activate; $(PYTHON) $(SCRIPT)
 
 fclean:
