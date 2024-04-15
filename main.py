@@ -1,20 +1,24 @@
-import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.svm import LinearSVC
-from sklearn.metrics import classification_report, accuracy_score
 import re
 import tools as tools
+from sklearn.svm import LinearSVC
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics import classification_report, accuracy_score
+
 
 def clean_text(text):
     """Clean the text by removing unnecessary characters"""
+
     text = re.sub(r'\W', ' ', str(text))
     text = re.sub(r'\s+', ' ', text, flags=re.I)
     text = re.sub(r'^b\s+', '', text)
+
     return text
+
 
 def main():
     """Main function."""
+
     try:
         df = tools.open_df("text.csv")
         df = tools.add_label_categories(df)
@@ -39,10 +43,12 @@ def main():
 
         predictions = model.predict(X_test)
         print(f'Accuracy Score: {accuracy_score(y_test, predictions)}')
-        print(f'Classification Report: \n{classification_report(y_test, predictions)}')
+        print("Classification Report: \n")
+        print(f'{classification_report(y_test, predictions)}')
 
     except Exception as e:
         print(f"Error: {e}")
+
 
 if __name__ == "__main__":
     main()

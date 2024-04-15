@@ -8,9 +8,9 @@ def add_label_categories(df: pd.DataFrame) -> pd.DataFrame:
 
     label_names = {0: "sadness(0)", 1: "joy(1)", 2: "love(2)",
                    3: "anger(3)", 4: "fear(4)", 5: "surprise(5)"}
-    
+
     df['category'] = df['label'].map(label_names)
-    print("\n", df['category'].value_counts(),"\n")
+    print("\n", df['category'].value_counts(), "\n")
 
     return df
 
