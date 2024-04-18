@@ -12,6 +12,9 @@ setup:
 run:
 	@. $(VENV_NAME)/bin/activate; $(PYTHON) $(SCRIPT)
 
+predict:
+	@. $(VENV_NAME)/bin/activate; $(PYTHON) predict.py
+
 fclean:
 	@echo "Cleaning up..."
 	rm -rf $(VENV_NAME)

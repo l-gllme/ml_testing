@@ -4,11 +4,13 @@ from sklearn.svm import LinearSVC
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import classification_report, accuracy_score
+from joblib import dump
 
 
 def clean_text(text):
     """Clean the text by removing unnecessary characters"""
 
+    text = text.lower()
     text = re.sub(r'\W', ' ', str(text))
     text = re.sub(r'\s+', ' ', text, flags=re.I)
     text = re.sub(r'^b\s+', '', text)
@@ -26,7 +28,6 @@ def main():
 
         print("\nCleaning the text...")
         df['text'] = df['text'].apply(clean_text)
-        print(df['text'].head())
 
         print("\nSplitting the data into training and testing sets...")
         X_train, X_test, y_train, y_test = train_test_split(
@@ -45,6 +46,10 @@ def main():
         print(f'Accuracy Score: {accuracy_score(y_test, predictions)}')
         print("Classification Report: \n")
         print(f'{classification_report(y_test, predictions)}')
+
+        print("\nSaving the model...")
+        dump(vectorizer, "vectorizer.joblib")
+        dump(model, "model.joblib")
 
     except Exception as e:
         print(f"Error: {e}")
