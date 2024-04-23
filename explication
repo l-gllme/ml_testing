@@ -1,0 +1,3 @@
+Précision (0,75) : indique que lorsque le modèle prédit un échantillon comme appartenant à la catégorie 5, il est correct 75 % du temps. Cela montre la fiabilité des prédictions positives du modèle pour cette catégorie.
+
+Rappel (0,71) : signifie que le modèle identifie correctement 71 % de tous les cas réels de la catégorie 5. Ce chiffre est essentiel pour comprendre l'efficacité du modèle à détecter tous les échantillons potentiels de la catégorie 5 sans en manquer.

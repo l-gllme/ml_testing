@@ -22,9 +22,10 @@ def main():
     """Main function."""
 
     try:
-        df = tools.open_df("text.csv")
+        df = tools.open_df("balanced_text.csv")
         df = tools.add_label_categories(df)
         tools.plot_category(df)
+        print(df.head())
 
         print("\nCleaning the text...")
         df['text'] = df['text'].apply(clean_text)

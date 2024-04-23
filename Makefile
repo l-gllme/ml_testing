@@ -7,7 +7,7 @@ all: run
 setup:
 	@test -d $(VENV_NAME) || $(PYTHON) -m venv $(VENV_NAME)
 	@echo "Activating virtual environment and installing dependencies..."
-	@. $(VENV_NAME)/bin/activate; pip install pandas matplotlib numpy scikit-learn
+	@. $(VENV_NAME)/bin/activate; pip install -r requirements
 
 run:
 	@. $(VENV_NAME)/bin/activate; $(PYTHON) $(SCRIPT)
