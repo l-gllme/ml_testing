@@ -1,6 +1,6 @@
 import re
 import tools as tools
-from sklearn.svm import LinearSVC
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import classification_report, accuracy_score
@@ -35,12 +35,12 @@ def main():
             df['text'], df['label'], test_size=0.2, random_state=42)
 
         print("\nVectorizing the text using TfidfVectorizer...")
-        vectorizer = TfidfVectorizer(max_features=3000)
+        vectorizer = TfidfVectorizer(max_features=3500)
         X_train = vectorizer.fit_transform(X_train)
         X_test = vectorizer.transform(X_test)
 
-        print("\nTraining LinearSVC...\n")
-        model = LinearSVC(random_state=42, dual=False)
+        print("\nTraining RandomForestClassifier...\n")
+        model = RandomForestClassifier(random_state=42, n_estimators=50)
         model.fit(X_train, y_train)
 
         predictions = model.predict(X_test)
