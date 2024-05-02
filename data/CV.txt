@@ -1,0 +1,59 @@
+Jane Doe
+
+Address: 1234 Maple Lane, Cityville, State 54321
+Phones: (123) 456-7890
+E-mail: janedoe@example.com
+LinkedIn: linkedin.com/in/janedoe
+GitHub: github.com/janedoe
+
+Objectives
+Experianced and detail-oreinted software developer seeking a positions in a challenging environment where I can utilize my programming skills to contribute to the company’s success and continue my profesional growth.
+
+Education
+Master of Science in Computer Science
+University of Tech City, Techville, State
+September 2016 - June 2018
+
+Bachelor of Science in Information Technology
+Tech University, Cityville, State
+September 2012 - June 2016
+
+Professional Experiences
+
+Senior Softwares Developers
+Innovative Tech Solutions, Cityville, State
+July 2020 - Present
+
+Led a team of 10 developers in creating software applications for clients in various industries.
+Designed, tested, and implemented new software programs.
+Maintained and improved the performances of existing software.
+Provided technical guidance and mentoring to junior developers.
+Software Developer
+TechSoft Ltd, Techville, State
+July 2018 - June 2020
+
+Developed and maintained applications in C# and Java.
+Collaborated with other departments to integrate software with their systems.
+Implemented improvements to increase software efficiency by 20%.
+Assisted in the design of new software features and applications.
+Internships
+
+Software Developer Intern
+Mobile Innovations, Cityville, State
+June 2016 - August 2016
+
+Assisted in the development of mobile applications.
+Participated in team meetings and contributed ideas to project discussions.
+Performed bug fixes and helped improve application performance.
+Skills
+
+Programming Languages: Python, Java, C#, JavaScript
+Frameworks/Technologies: .NET, Spring, Angular, Django
+Tools: Docker, Jenkins, Git, Kubernetes
+Strong problem-solving skills and ability to work under pressure.
+Certifications
+
+Certified Java Developer – Oracle, 2019
+Certified Python Programmer – Python Institute, 2017
+References
+Available upon request.
