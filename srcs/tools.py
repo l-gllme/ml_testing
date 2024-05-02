@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 
 
 def add_label_categories(df: pd.DataFrame) -> pd.DataFrame:
@@ -34,6 +35,8 @@ def plot_category(df: pd.DataFrame):
 def open_df(path) -> pd.DataFrame:
     """Open the dataframe from the path"""
 
+    if not os.path.exists("models"):
+        os.mkdir("models")
     df = pd.read_csv(path)
     if df is None:
         raise Exception("Dataframe is empty")

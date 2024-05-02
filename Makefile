@@ -1,4 +1,4 @@
-VENV_NAME := ml-env
+VENV_NAME := venv
 PYTHON := python3
 SCRIPT := srcs/main.py
 
@@ -13,6 +13,7 @@ freeze:
 	@. $(VENV_NAME)/bin/activate; pip freeze > config/requirements
 
 run:
+	@if [ ! -d $(VENV_NAME) ]; then make setup; fi
 	@. $(VENV_NAME)/bin/activate; $(PYTHON) $(SCRIPT)
 
 predict:
@@ -21,5 +22,6 @@ predict:
 fclean:
 	rm -rf $(VENV_NAME)
 	rm -rf __pycache__
+	rm -rf models/*
 
 .PHONY: all setup run fclean
