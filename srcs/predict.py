@@ -8,8 +8,8 @@ def main():
     """Main function."""
 
     try:
-        model = load("model.joblib")
-        vectorizer = load("vectorizer.joblib")
+        model = load("models/model.joblib")
+        vectorizer = load("models/vectorizer.joblib")
 
         while True:
             text = input("\nEnter a text: ")

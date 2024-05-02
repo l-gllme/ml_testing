@@ -22,7 +22,7 @@ def main():
     """Main function."""
 
     try:
-        df = tools.open_df("balanced_text.csv")
+        df = tools.open_df("data/balanced_text.csv")
         df = tools.add_label_categories(df)
         tools.plot_category(df)
         print(df.head())
@@ -49,8 +49,8 @@ def main():
         print(f'{classification_report(y_test, predictions)}')
 
         print("\nSaving the model...")
-        dump(vectorizer, "vectorizer.joblib")
-        dump(model, "model.joblib")
+        dump(vectorizer, "models/vectorizer.joblib")
+        dump(model, "models/model.joblib")
 
     except Exception as e:
         print(f"Error: {e}")

@@ -27,7 +27,7 @@ def plot_category(df: pd.DataFrame):
     plt.ylabel('Number of Occurrences')
     plt.xticks(rotation=0)
     plt.grid(True, linestyle='--', alpha=0.6)
-    plt.savefig('category_distribution.png')
+    plt.savefig('graph/category_distribution.png')
     plt.show()
 
 
